@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">RestaurantMenu</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="myAccount">Account</string>
+    <string name="login_admin">Login as Admin</string>
+    <string name="login_delivery">Login as delivery boy</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="register_">You don\'t have an account?</string>
+    <string name="register">Register</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="veg_salad">Veg Salad</string>
+    <string name="spaghetti">Spaghetti</string>
+    <string name="fries">Fries</string>
+    <string name="cupcake">Cupcake</string>
+    <string name="text">Well to know the recipe an order has to be placed first and
+     your package comes with a pleasant suprise
+    </string>
+
+</resources>
