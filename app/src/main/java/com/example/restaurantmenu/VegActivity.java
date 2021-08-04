@@ -34,21 +34,26 @@ public class VegActivity extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_veg);
 
         // initialize buttons
-        add =  findViewById(R.id.add_veg_quantity);
-        reduce = findViewById(R.id.reduce_quantity_veg);
-        order = findViewById(R.id.order_veg);
-        cancel = findViewById(R.id.cancel_veg);
-        priceText = findViewById(R.id.price_veg);
+        add =  findViewById(R.id.add_quantity);
+        reduce = findViewById(R.id.reduce_quantity);
+        order = findViewById(R.id.order);
+        cancel = findViewById(R.id.cancel);
+        priceText = findViewById(R.id.price);
 
-        // initialize textviews
-        quantity = findViewById(R.id.quantity_veg);
-        quantityText = findViewById(R.id.quantity_text_veg);
+        // initialize text views
+        quantity = findViewById(R.id.quantity);
+        quantityText = findViewById(R.id.quantity_text);
 
         // set listeners
         add.setOnClickListener(this);
         reduce.setOnClickListener(this);
         order.setOnClickListener(this);
         cancel.setOnClickListener(this);
+
+        // initialize model class
+
+        Item item;
+
     }
 
     @Override
@@ -86,10 +91,12 @@ public class VegActivity extends AppCompatActivity implements View.OnClickListen
         // add to cart
         if(v == order){
             intent = new Intent(VegActivity.this, CartActivity.class);
-            intent.putExtra("EXTRA_NAME_VEG", menu_name);
-            intent.putExtra("EXTRA_IMAGE_VEG", R.drawable.veg_salad);
-            intent.putExtra("EXTRA_QUANTITY_VEG", quantityText.getText().toString());
-            intent.putExtra("EXTRA_PRICE_VEG",priceText.getText().toString());
+            intent.putExtra("EXTRA_NAME", menu_name);
+            intent.putExtra("EXTRA_IMAGE", R.drawable.veg_salad);
+            intent.putExtra("EXTRA_QUANTITY", quantityText.getText().toString());
+            intent.putExtra("EXTRA_PRICE",priceText.getText().toString());
+
+
             startActivity(intent);
         }
 
